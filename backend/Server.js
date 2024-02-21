@@ -12,6 +12,10 @@ mongoose.connect('mongodb://0.0.0.0:27017/contact-manager-db', { useNewUrlParser
 
 // Define routes and middleware as needed
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Contact Manager App!');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
